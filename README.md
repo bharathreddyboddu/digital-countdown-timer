@@ -56,7 +56,7 @@ CD4511 BCD-to-7-Segment Driver
 Logic Control
         ↓
 Output Alert
-```
+
 digital-countdown-timer/
 │
 ├── docs/
