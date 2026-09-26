@@ -45,15 +45,16 @@ Alert / Output
 
 ![Countdown Output at 00](hardware/PCB_Implementation_Output_alert_at_00.png)
 
-## Working Demonstration
-
-[Countdown Timer Working Demo](hardware/Countdown_Timer_Working_Demo.mp4)
 
 ## Simulation
 
 The circuit was designed and verified using Proteus.
 
 ![Proteus Circuit Diagram](simulation/Proteus_Circuit_Diagram_Countdown_Timer.png)
+
+## Working Demonstration
+
+[Countdown Timer Working Demo](hardware/Countdown_Timer_Working_Demo.mp4)
 
 ## Project Structure
 
