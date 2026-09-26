@@ -1,73 +1,74 @@
-# Digital Countdown Timer
+# Discrete Logic NE555–BCD Countdown Timer
 
-A digital countdown timer implemented using discrete digital electronics components, including an NE555 timer, CD4510 BCD counters, CD4511 BCD-to-7-segment drivers, logic gates, switches, and four 7-segment displays.
+A digital countdown timer designed using NE555 timer circuitry, BCD counting logic, and digital display circuitry. The project was simulated in Proteus and physically implemented and tested on hardware.
 
-## Project Overview
+## Overview
 
-The project implements a multi-digit digital countdown timer using a 555 timer as the clock source, BCD counters for counting, BCD-to-7-segment drivers for display, and logic gates for control functions.
-
-The timer supports presetting and countdown operation, with an output alert when the countdown reaches 00.
+The system generates clock pulses using an NE555 timer, which drive the BCD counting stages to perform the countdown. The countdown value is displayed digitally, and an alert/output condition is generated when the count reaches `00`.
 
 ## Key Features
 
-- Multi-digit digital countdown
 - NE555-based clock generation
-- BCD counting using CD4510 counters
-- 7-segment display driving using CD4511 ICs
-- Logic-gate-based control
-- Preset and reset functionality
-- Output alert at countdown completion
-- Physical PCB implementation
+- BCD-based countdown logic
+- Digital countdown display
+- Zero-count detection and alert output
 - Proteus circuit simulation
-
-## Main Components
-
-- NE555 Timer IC
-- CD4510 BCD Up/Down Counter ICs
-- CD4511 BCD-to-7-Segment Decoder/Driver ICs
-- 74LS02 Logic Gates
-- 74LS08 Logic Gates
-- 7-Segment Displays
-- Push Buttons / Switches
-- Resistors and Capacitors
-- PCB and connecting components
+- Physical hardware implementation
+- Hardware testing and working demonstration
 
 ## Working Principle
 
-The NE555 timer generates the clock signal required for the countdown operation.
+```text
+NE555 Timer
+     ↓
+Clock Pulses
+     ↓
+BCD Counting Logic
+     ↓
+Countdown Display
+     ↓
+Zero Detection
+     ↓
+Alert / Output
+```
+## Hardware Implementation
 
-The clock pulses are applied to the BCD counters. The counter outputs are connected to CD4511 BCD-to-7-segment decoder/drivers, which drive the corresponding 7-segment displays.
+### PCB Component Side
 
-Logic gates are used to implement control conditions such as rollover, reset, and the output alert condition.
+![PCB Component Side](hardware/PCB_Component_Side.png)
 
-The timer counts down from the preset value and activates the output alert when the countdown reaches 00.
+### PCB Solder Side
 
-## System Flow
+![PCB Solder Side](hardware/PCB_Solder_Side.png)
+
+### Countdown Output at 00
+
+![Countdown Output at 00](hardware/PCB_Implementation_Output_alert_at_00.png)
+
+## Working Demonstration
+
+[Countdown Timer Working Demo](hardware/Countdown_Timer_Working_Demo.mp4)
+
+## Simulation
+
+The circuit was designed and verified using Proteus.
+
+![Proteus Circuit Diagram](simulation/Proteus_Circuit_Diagram_Countdown_Timer.png)
+
+## Project Structure
 
 ```text
-NE555 Clock Generator
-        ↓
-BCD Counter Stage
-        ↓
-CD4511 BCD-to-7-Segment Driver
-        ↓
-7-Segment Display
-        ↓
-Logic Control
-        ↓
-Output Alert
+docs/
+└── Digital Countdown Timer Report.pdf
 
-digital-countdown-timer/
-│
-├── docs/
-│   └── Digital Countdown Timer Report.pdf
-│
-├── hardware/
-│   ├── PCB_Implementation_Normal_condition.png
-│   └── PCB_Implementation_Output_alert_at_00.png
-│
-├── simulation/
-│   ├── Proteus_Circuit Diagram_Countdown_Timer.png
-│   └── Countdown_Timer_Schematic_Proteus - Simulation.pdsprj
-│
-└── README.md
+hardware/
+├── Countdown_Timer_Working_Demo.mp4
+├── PCB_Component_Side.png
+├── PCB_Implementation_Output_alert_at_00.png
+└── PCB_Solder_Side.png
+
+simulation/
+├── Countdown_Timer_Schematic_Proteus.pdsprj
+└── Proteus_Circuit_Diagram_Countdown_Timer.png
+```
+README.md
