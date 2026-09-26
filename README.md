@@ -50,7 +50,7 @@ Alert / Output
 
 The circuit was designed and verified using Proteus.
 
-![Proteus Circuit Diagram](simulation/Proteus_Circuit_Diagram_Countdown_Timer.png)
+![Proteus Circuit Diagram](simulation/Proteus_Circuit%20Diagram_Countdown_Timer.png)
 
 ## Working Demonstration
 
